@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainWeatherViewController" customModule="Weather" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="SLM-aC-9Dv" id="GhW-Rx-q7K"/>
+                <outlet property="generalWeatherView" destination="gua-5z-rQd" id="4v0-jf-QML"/>
+                <outlet property="tableView" destination="H4M-vv-Ghs" id="WMk-9b-s40"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gua-5z-rQd" customClass="GeneralWeatherView" customModule="Weather" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                    <color key="backgroundColor" name="Blue"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="UWC-Vf-M3X"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SLM-aC-9Dv">
+                    <rect key="frame" x="0.0" y="300" width="414" height="145"/>
+                    <color key="backgroundColor" name="LightBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="145" id="Rq0-Sn-yrb"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="K9V-qI-Ub8">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="lDn-Rv-Zfl"/>
+                        <outlet property="delegate" destination="-1" id="Guv-vu-LBb"/>
+                    </connections>
+                </collectionView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H4M-vv-Ghs">
+                    <rect key="frame" x="0.0" y="445" width="414" height="417"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eM3-Sc-1Dw"/>
+                        <outlet property="delegate" destination="-1" id="b5r-jB-zKm"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVF-Xt-lLO">
+                    <rect key="frame" x="369" y="64" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="DVF-Xt-lLO" secondAttribute="height" multiplier="1:1" id="NmT-TV-6lw"/>
+                        <constraint firstAttribute="height" constant="25" id="my0-TN-xh2"/>
+                    </constraints>
+                    <state key="normal" image="ic_my_location"/>
+                    <connections>
+                        <action selector="locationButtonAction:" destination="-1" eventType="touchUpInside" id="9YT-ca-SWY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gua-5z-rQd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="906-qT-j75"/>
+                <constraint firstItem="SLM-aC-9Dv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DPU-W1-NAG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="H4M-vv-Ghs" secondAttribute="bottom" id="E2O-SU-cPW"/>
+                <constraint firstItem="DVF-Xt-lLO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="EkU-wy-hmU"/>
+                <constraint firstItem="H4M-vv-Ghs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QWf-Mv-xb8"/>
+                <constraint firstItem="SLM-aC-9Dv" firstAttribute="top" secondItem="gua-5z-rQd" secondAttribute="bottom" id="VfL-GV-LJV"/>
+                <constraint firstItem="H4M-vv-Ghs" firstAttribute="top" secondItem="SLM-aC-9Dv" secondAttribute="bottom" id="eQ0-44-b7K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H4M-vv-Ghs" secondAttribute="trailing" id="gjy-Kl-LNA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SLM-aC-9Dv" secondAttribute="trailing" id="jVa-8E-zSV"/>
+                <constraint firstItem="gua-5z-rQd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wXd-66-AXD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DVF-Xt-lLO" secondAttribute="trailing" constant="20" id="zRr-c5-41q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gua-5z-rQd" secondAttribute="trailing" id="zZA-9i-P1X"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_my_location" width="46" height="46"/>
+        <namedColor name="Blue">
+            <color red="0.29019607843137257" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightBlue">
+            <color red="0.35294117647058826" green="0.62352941176470589" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

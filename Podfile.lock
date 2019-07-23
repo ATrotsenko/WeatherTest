@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.8.2)
+  - SwiftLocation (4.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftLocation
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SwiftLocation
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  SwiftLocation: 4f030832331a21abaa4e0c5189d0f80ab8d3e377
+
+PODFILE CHECKSUM: 2fa4d95920c306ebe87da0ea13be1f55eeb40be0
+
+COCOAPODS: 1.5.3
